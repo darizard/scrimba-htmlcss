@@ -11,6 +11,18 @@ body {
     display: flex;
 }
 
+@media (min-width:320px) {
+    .mainbox {
+        height: calc(100% - 60px);
+    }
+}
+
+@media (min-width:501px) {
+    .mainbox {
+        height: calc(100% - 50px);
+    }
+}
+
 .boxcol {
     margin: 20px 30px;
 }
@@ -41,7 +53,6 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 50px;
     margin: 0 auto;
     text-align: center;
 }
@@ -52,7 +63,5 @@ body {
 
 .credits {
     display: inline;
-    height: 100%;
     font-style: italic;
-    vertical-align: middle;
 }
