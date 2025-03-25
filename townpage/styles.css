@@ -7,6 +7,19 @@ body {
     background-color: whitesmoke;
 }
 
+#main-content {
+    position:fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 0 0;
+    width: calc(100%);
+    height: calc(100% - 80px);
+    overflow-y: auto;
+}
+
 #main-hero {
     display: flex;
     flex-direction: column;
@@ -95,4 +108,19 @@ body {
 
 .card-right {
     width: 200px;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.credits {
+    font-style: italic;
+    padding-top: 10px;
 }

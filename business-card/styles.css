@@ -1,5 +1,6 @@
 body {
-    margin: 20px;
+    background-color: whitesmoke;
+    margin: 0px;
     /*
     Challenge:
     Find a web safe font you like, and add it 
@@ -8,13 +9,10 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.avatar {
-    width: 150px;
-}
-
 .card {
+    position: relative;
     width: 400px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -24,24 +22,37 @@ body {
     border-bottom: 6px solid #d62828;
 }
 
+#img-eye {
+    position: absolute;
+    width: 25px;
+    top: 5px;
+    left: 5px;
+
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+}
+
+#info-section {
+    width: 150px;
+}
+
 .border-blue {
     border: 1px dotted blue;
 }
 
-/*
-Stretch goals:
-Find other ways you can personalize 
-the design of your business card, e.g.:
-- change the border(s)
-- add border radius
-- shuffle the layout
-- shadows        🤯
-- hover effects  🤯🤯
-- animations     🤯🤯🤯
-*/
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+}
 
-/*
-Final challenge:
-Download the code to your local computer and place it
-in a folder called "business-card"
-*/
+.credits {
+    font-style: italic;
+    padding-top: 10px;
+}

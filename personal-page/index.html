@@ -3,19 +3,29 @@
     <head>
         <link rel="stylesheet" href="styles.css" />
         <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=Creepster&family=La+Belle+Aurore&family=MedievalSharp&family=Orbitron&family=Rye&display=swap" rel="stylesheet">
-        <script src="index.js"></script>
     </head>
     <body>
-        <img src="pfp.png" />
-        <h1>Hi, my name is Dari!</h1>
-        <h2>Fun facts about me:</h2>
-        <ul>
-            <li>40 years old</li>
-            <li>Friend to many birds</li>
-            <li>Hobbyist 3d artist</li>
-        </ul>
-        <p>You can find me on <a href="https://discord.com" target="_blank">Discord</a> as <span style="font-weight: bold">darizard</span>.</p>
-        <input type="text" placeholder="Enter email..." />
-        <button>Give shinies</button>
+        <div id="main-content">
+            <img id="avatar" src="images/me400.png" />
+            <h1>Hi, my name is <span id="name">Jon</span></h1>
+            <h2>Fun facts about me:</h2>
+            <ul id="info-list">
+                <li>40 years old</li>
+                <li>Gaming enthusiast</li>
+                <li>Aspiring Full-Stack Developer</li>
+            </ul>
+            <p>You can find me on <span id="contact"><a id="contact-link" href="https://www.linkedin.com/in/jonathan-strode-803aa3a2/" target="_blank">LinkedIn</a>.</span></p>
+            <input type="text" placeholder="Enter email..." />
+            <button id="btn-nothing">A button for YOU</button>
+
+            <img id="img-eye" src="images/eye-icon-closed-50px.png">
+        </div>
+
+        <div class="footer">
+            <hr>
+            <p class="credits">Page concept by Scrimba.com's <a href="https://scrimba.com/learn-html-and-css-c0p" target="_blank">HTML/CSS course</a>!</p>
+        </div>
+
+        <script src="index.js"></script>
     </body>
 </html>

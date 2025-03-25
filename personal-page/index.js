@@ -1,3 +1,60 @@
+let light = true;
+
+// Pull elements from DOM for simple property overwrites
+const avatarEl = document.getElementById("avatar");
+const eyeIconEl = document.getElementById("img-eye");
+const nameEl = document.getElementById("name");
+const contactEl = document.getElementById("contact");
+
+// Set up for <ul> contents replacement
+const normalList = document.getElementById("info-list");
+const eyeList = document.createElement("ul");
+const eyeStrs = ["40 years old", "Friend to many birds", "Hobbyist 3d artist", "Replaces HTML elements"];
+for(var str of eyeStrs) eyeList.appendChild(createLI(str));
+
+// Set up event listeners, and change mouseover behavior when eye icon is clicked
+eyeIconEl.addEventListener("mouseover", darkMode);
+eyeIconEl.addEventListener("mouseleave", lightMode);
+eyeIconEl.addEventListener("click", function() {
+    if(light) {
+        eyeIconEl.src = "images/eye-icon-50px.png";
+        eyeIconEl.removeEventListener("mouseover",darkMode);
+        eyeIconEl.removeEventListener("mouseleave",lightMode);
+        light = false;
+    } else {
+        eyeIconEl.src = "images/eye-icon-closed-50px.png";
+        eyeIconEl.addEventListener("mouseover",darkMode);
+        eyeIconEl.addEventListener("mouseleave",lightMode);
+        light = true;
+    }
+});
+
+// Create an <li> element with the text passed in as argument.
+// Helper for populating the replacement list.
+function createLI(text) {
+    let li = document.createElement("li");
+    li.textContent = text;
+    return li;
+}
+
+// Change identity to Dari
+function darkMode() {
+    avatarEl.src = "images/pfp.png";
+    nameEl.textContent = "Dari";
+    document.getElementById("main-content").replaceChild(eyeList, normalList);
+    contactEl.innerHTML = "<a id=\"contact-link\" href=\"https://discord.gg\" target=\"_blank\">Discord</a> as <span id=\"username\">darizard</span>.";
+}
+
+// Change identity to Jon
+function lightMode() {
+    avatarEl.src = "images/me400.png";
+    nameEl.textContent = "Jon";
+    document.getElementById("main-content").replaceChild(normalList, eyeList);
+    contactEl.innerHTML = "<a id=\"contact-link\" href=\"https://www.linkedin.com/in/jonathan-strode-803aa3a2/\" target=\"_blank\">LinkedIn</a>."
+}
+
+// ***********All of the below code was provided by Scrimba.com***********
+
 // Challenge 2:
 // Replace the arguments below according to your preference.
 
